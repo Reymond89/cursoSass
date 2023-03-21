@@ -1,0 +1,45 @@
+// $primary: crimson;
+
+// :root{
+//     --primary: #{$primary};
+// }
+
+@use 'mixinsfunc';
+
+
+.nav{
+    background-color: steelblue;
+
+    &__container{
+        width: 90%;
+        margin: auto;
+        height: 70px;
+        @include mixinsfunc.crear-flexbox(space-evenly);
+        gap: 1em;
+    }
+
+    &__item{
+       color: #fff;
+       text-decoration: none;
+
+       &--active{
+           text-decoration: underline;
+       }
+
+    //  &:hover{
+    //      color: black;
+    //  }
+    }
+
+    @media (min-width:764px) {
+        &__container{
+            justify-content: flex-end;
+        }
+    }
+
+   
+
+
+    
+}
+
